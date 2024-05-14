@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS50 Pong Game</title>
+    <title>Pong Game</title>
     <style>
         body, html {
             height: 100%;
@@ -11,7 +11,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #282c34; /* Fundo escuro */
+            background-color: #0f2e6b; /* Fundo escuro */
         }
 
         #pong-game {
@@ -34,7 +34,7 @@
 </head>
 <body>
     <div id="pong-game">
-        <div id="pong-title">CS50 Pong Game</div>
+        <div id="pong-title">Pong Game</div>
         <canvas id="pong"></canvas>
     </div>
     <script>
@@ -104,13 +104,14 @@
         }
 
         function computerMovement() {
-            let middlePaddle = computer.y + computer.height / 2;
-            if (middlePaddle < ball.y - 20) {
-                computer.y += 3;
-            } else if (middlePaddle > ball.y + 20) {
-                computer.y -= 3;
-            }
-        }
+    let middlePaddle = computer.y + computer.height / 2;
+    if (middlePaddle < ball.y - 20) {
+        computer.y += 5; // Aumentando a velocidade de movimento do computador
+    } else if (middlePaddle > ball.y + 20) {
+        computer.y -= 5; // Aumentando a velocidade de movimento do computador
+    }
+}
+
 
         function collision(b, p) {
             b.top = b.y - b.radius;
