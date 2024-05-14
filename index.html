@@ -26,10 +26,13 @@
         }
 
         canvas {
-            background-color: #000000; /* Fundo preto para o campo do jogo */
-            display: block;
-            border: 2px solid #FFFFFF; /* Borda branca para contraste */
-        }
+    background-color: #000000; /* Fundo preto para o campo do jogo */
+    display: block;
+    border: 2px solid; /* Removendo a cor da borda aqui */
+    border-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3); /* Usando um gradiente de cores como borda */
+    border-image-slice: 1; /* Isso garante que o gradiente seja aplicado à borda inteira */
+}
+
     </style>
 </head>
 <body>
@@ -180,4 +183,4 @@
         });
     </script>
 </body>
-</html>
+</html>l>
