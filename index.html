@@ -11,7 +11,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #0f2e6b; /* Fundo escuro */
+            background-color: #0f2e6b; /* fundo escuro */
         }
 
         #pong-game {
@@ -19,18 +19,18 @@
         }
 
         #pong-title {
-            color: #FFFFFF; /* Texto branco */
+            color: #FFFFFF;
             font-size: 24px;
             margin-bottom: 20px;
-            font-family: Arial, sans-serif; /* Mudança de fonte */
+            font-family: Arial, sans-serif; 
         }
 
         canvas {
-    background-color: #000000; /* Fundo preto para o campo do jogo */
+    background-color: #000000; 
     display: block;
-    border: 2px solid; /* Removendo a cor da borda aqui */
-    border-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3); /* Usando um gradiente de cores como borda */
-    border-image-slice: 1; /* Isso garante que o gradiente seja aplicado à borda inteira */
+    border: 2px solid; 
+    border-image: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3); 
+    border-image-slice: 1; 
 }
 
     </style>
@@ -53,7 +53,7 @@
             radius: 10,
             velocityX: 5,
             velocityY: 5,
-            speed: 10, // Aumento da velocidade da bola
+            speed: 10, 
             color: "#FFFFFF"
         };
 
@@ -103,15 +103,15 @@
             ball.x = canvas.width / 2;
             ball.y = canvas.height / 2;
             ball.velocityX = -ball.velocityX;
-            ball.speed = 10; // Redefinindo a velocidade da bola
+            ball.speed = 10; 
         }
 
         function computerMovement() {
     let middlePaddle = computer.y + computer.height / 2;
     if (middlePaddle < ball.y - 20) {
-        computer.y += 5; // Aumentando a velocidade de movimento do computador
+        computer.y += 5; 
     } else if (middlePaddle > ball.y + 20) {
-        computer.y -= 5; // Aumentando a velocidade de movimento do computador
+        computer.y -= 5; 
     }
 }
 
